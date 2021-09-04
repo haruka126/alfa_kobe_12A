@@ -1,14 +1,16 @@
-import { Stack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { ProductCard } from "../components/ProductCard";
-import { Footer } from "../components/Footer";
+import { TextAnimation } from "../components/TextAnimation";
 
 export const PageAdmin: React.VFC = () => {
     return (
         <>
-            <Stack h="100vh" d="flex" justifyContent="center" alignItems="center">
-                <ProductCard adminMode />
-            </Stack>
-            <Footer height="15vh" backgroundColor="#e7e7e7" />
+            <Box h="100vh" d="flex" justifyContent="center" alignItems="center">
+                <ProductCard adminMode onClickDelete={() => 
+                    <TextAnimation text="あなたのゲームデータは守られました！" duration={2} />
+                } />
+            </Box>
+            {/* PageLoginAdmin内なのでFooterが2重にならないよう、Footerを呼ばないように */}
         </>
     );
 };
