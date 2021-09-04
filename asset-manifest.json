@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/alfa_kobe_12A/static/js/main.0bd1ffae.chunk.js",
-    "main.js.map": "/alfa_kobe_12A/static/js/main.0bd1ffae.chunk.js.map",
+    "main.js": "/alfa_kobe_12A/static/js/main.d208553f.chunk.js",
+    "main.js.map": "/alfa_kobe_12A/static/js/main.d208553f.chunk.js.map",
     "runtime-main.js": "/alfa_kobe_12A/static/js/runtime-main.28993655.js",
     "runtime-main.js.map": "/alfa_kobe_12A/static/js/runtime-main.28993655.js.map",
-    "static/js/2.64930cc3.chunk.js": "/alfa_kobe_12A/static/js/2.64930cc3.chunk.js",
-    "static/js/2.64930cc3.chunk.js.map": "/alfa_kobe_12A/static/js/2.64930cc3.chunk.js.map",
+    "static/js/2.7a0c000f.chunk.js": "/alfa_kobe_12A/static/js/2.7a0c000f.chunk.js",
+    "static/js/2.7a0c000f.chunk.js.map": "/alfa_kobe_12A/static/js/2.7a0c000f.chunk.js.map",
     "index.html": "/alfa_kobe_12A/index.html",
-    "static/js/2.64930cc3.chunk.js.LICENSE.txt": "/alfa_kobe_12A/static/js/2.64930cc3.chunk.js.LICENSE.txt"
+    "static/js/2.7a0c000f.chunk.js.LICENSE.txt": "/alfa_kobe_12A/static/js/2.7a0c000f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.28993655.js",
-    "static/js/2.64930cc3.chunk.js",
-    "static/js/main.0bd1ffae.chunk.js"
+    "static/js/2.7a0c000f.chunk.js",
+    "static/js/main.d208553f.chunk.js"
   ]
 }
