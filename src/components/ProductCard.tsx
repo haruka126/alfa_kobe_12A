@@ -5,9 +5,11 @@ import { useState } from "react"
 type Props = {
     adminMode?: boolean;
     margin?: string;
+    onClickDelete?: Function | null;
 };
 
-export const ProductCard: React.VFC<Props> = ({ adminMode = false, margin = "" }) => {
+export const ProductCard: React.VFC<Props> = ({ adminMode = false, margin = "", onClickDelete = null }) => {
+
     const [deleted, setDeleted] = useState(false);
 
     const property = {
@@ -19,8 +21,12 @@ export const ProductCard: React.VFC<Props> = ({ adminMode = false, margin = "" }
         rating: 4,
     };
 
-    if (deleted)    
-        return <p>あなたのゲームデータは守られました！</p>;
+    if (deleted) {
+        if (onClickDelete !== null)
+            return onClickDelete();
+        else
+            throw new Error("You need to pass onClickDelete as an argument!");
+    }
     else {
         return (
             <Box m={margin} maxW="xs" borderWidth="1px" borderRadius="lg" overflow="hidden">
