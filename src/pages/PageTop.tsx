@@ -7,7 +7,7 @@ export const PageTop: React.VFC = () => {
         <>
             <Header height="40vh" imageUrl="https://unsplash.it/1000/500" />
             <TopPageMain />
-            <Footer height="15vh" backgroundColor="#e7e7e7" enableCopyright />
+            <Footer height="15vh" backgroundColor="#e7e7e7" />
         </>
     );
 };
