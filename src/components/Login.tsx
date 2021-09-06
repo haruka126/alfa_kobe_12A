@@ -3,15 +3,15 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { ChangeEvent, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { LostPassword } from "./LostPassword";
-import { PageAdmin } from "../pages/PageAdmin";
 
 type Props = {
     // 数値配列で受け取り、それを文字列に変換する。
     userName: number[];
     password: number[];
+    onLoginComplete: Function;
 };
 
-export const Login: React.VFC<Props> = ({ userName, password }) => {
+export const Login: React.VFC<Props> = ({ userName, password, onLoginComplete }) => {
     const [input_user_id, setUserId] = useState("");
     const [input_password, setInputPassword] = useState("");
     const [login_complete, setLoginComplete] = useState(false);
@@ -71,7 +71,7 @@ export const Login: React.VFC<Props> = ({ userName, password }) => {
     if (query.get("action") === "lostpassword")
         return <LostPassword />;
     else if (login_complete)
-        return <PageAdmin />
+        return onLoginComplete();
     else {
         return (
             <Flex align="center" justify="center" height="100vh">

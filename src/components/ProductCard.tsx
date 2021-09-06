@@ -9,7 +9,6 @@ type Props = {
 };
 
 export const ProductCard: React.VFC<Props> = ({ adminMode = false, margin = "", onClickDelete = null }) => {
-
     const [deleted, setDeleted] = useState(false);
 
     const property = {
