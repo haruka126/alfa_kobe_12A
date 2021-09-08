@@ -1,7 +1,9 @@
-import { Box, Center } from "@chakra-ui/react";
+import { Box, Center, Stack, Grid } from "@chakra-ui/react";
 import { useState } from "react";
+import { MarketHeader } from "../components/MarketHeader";
 import { ProductCard } from "../components/ProductCard";
 import { PageCleared } from "./PageCleared";
+
 
 export const PageRealAdmin: React.VFC = () => {
     const [card_deleted, setCardDeleted] = useState(false);
@@ -13,13 +15,24 @@ export const PageRealAdmin: React.VFC = () => {
                 <PageCleared />
             </Center>
             :
-            <Box h="100vh" d="flex" justifyContent="center" alignItems="center">
-                <ProductCard adminMode onClickDelete={() => 
-                    setCardDeleted(true)
-                } />
-            </Box>
+            <>
+                <MarketHeader height="6vh" />
+                <Center h="100vh" bgColor="#EAEDED">
+                    <Stack direction="column">
+                        <Center>
+                            <Box w="80%" p="2vw" bgColor="white" boxShadow="sm">
+                                <Grid templateColumns="repeat(3, 1fr)" gap={4} placeItems="center">
+                                    <ProductCard adminMode onClickDelete={() => 
+                                        setCardDeleted(true)
+                                    } />
+                                </Grid>
+                            </Box>
+                        </Center>
+                    </Stack>
+                </Center>
+            </>
             }
-            {/* PageLoginAdmin内なのでFooterが2重にならないよう、Footerを呼ばないように */}
+            {/* Footerが2重にならないよう、Footerを呼ばないように */}
         </>
     );
 };

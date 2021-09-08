@@ -14,17 +14,6 @@ export const PageMarket: React.VFC = () => {
                         <Box w="80%" p="2vw" bgColor="white" boxShadow="sm">
                             <Grid templateColumns="repeat(3, 1fr)" gap={4} placeItems="center">
                                 <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
-                            </Grid>
-                        </Box>
-                    </Center>
-                    <Center>
-                        <Box w="80%" p="2vw" bgColor="white" boxShadow="sm">
-                            <Grid templateColumns="repeat(3, 1fr)" gap={4} placeItems="center">
-                                <ProductCard />
-                                <ProductCard />
-                                <ProductCard />
                             </Grid>
                         </Box>
                     </Center>
