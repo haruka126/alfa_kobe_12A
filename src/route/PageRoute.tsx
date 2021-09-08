@@ -9,7 +9,7 @@ export const PageRoute: React.VFC = () => {
     return (
         <Switch>
             <Route exact path="/" component={PageTop} />
-            <Route path="/store" render={({ match: { url } }) => (
+            <Route path="/market" render={({ match: { url } }) => (
                 <Switch>
                     <Route exact path={url} component={PageMarket} />
                     <Route path={`${url}/dummyadmin`} component={PageDummyLogin} />
