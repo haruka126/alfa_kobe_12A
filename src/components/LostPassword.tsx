@@ -5,6 +5,7 @@ export const LostPassword: React.VFC = () => {
     return (
         <>
             <p>ユーザー名はMichaelでパスワードはJacksonです。</p>
+            <p>二回目のログイン画面の場合は逆です。</p>
             <Link to={pathname}>ログインに戻る。</Link>
         </>
     );

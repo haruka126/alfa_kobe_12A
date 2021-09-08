@@ -6,9 +6,16 @@ import { useCallback, useEffect } from 'react';
 type Props = {
     text: string;
     duration: number; // 秒
+    onComplete?: Function;
 };
 
-export const TextAnimation: React.VFC<Props> = ({ text, duration }) => {
+export const TextAnimation: React.VFC<Props> = ({ text, duration, onComplete }) => {
+    const onCompleteCallback = useCallback(() => {
+        if (onComplete)
+            onComplete();
+    // eslint-disable-next-line react-hooks/exhaustive-deps      
+    }, []);
+
     const setAnimation = useCallback(() => {
         gsap.to(".ret", {
             duration: duration,
@@ -16,7 +23,8 @@ export const TextAnimation: React.VFC<Props> = ({ text, duration }) => {
               value: text,
               delimiter: "",
             },
-            ease: "none"
+            ease: "none",
+            onComplete: onCompleteCallback
         });
     // eslint-disable-next-line react-hooks/exhaustive-deps      
     }, []);
