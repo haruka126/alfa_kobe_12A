@@ -1,3 +1,5 @@
+import "./styles.css";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { HashRouter } from "react-router-dom";
 import { PageRoute } from "./route/PageRoute";

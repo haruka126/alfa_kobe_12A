@@ -1,8 +1,7 @@
-import { Box, Center, Stack, Grid } from "@chakra-ui/react";
 import { useState } from "react";
 import { MarketHeader } from "../components/MarketHeader";
-import { ProductCard } from "../components/ProductCard";
-import { PageCleared } from "./PageCleared";
+import { MarketMain } from "../components/MarketMain";
+import { GameClear } from "../components/GameClear";
 
 
 export const PageRealAdmin: React.VFC = () => {
@@ -11,25 +10,13 @@ export const PageRealAdmin: React.VFC = () => {
     return (
         <>
             { card_deleted ?
-            <Center h="100vh">
-                <PageCleared />
-            </Center>
+                <GameClear />
             :
             <>
-                <MarketHeader height="6vh" />
-                <Center h="100vh" bgColor="#EAEDED">
-                    <Stack direction="column">
-                        <Center>
-                            <Box w="80%" p="2vw" bgColor="white" boxShadow="sm">
-                                <Grid templateColumns="repeat(3, 1fr)" gap={4} placeItems="center">
-                                    <ProductCard adminMode onClickDelete={() => 
-                                        setCardDeleted(true)
-                                    } />
-                                </Grid>
-                            </Box>
-                        </Center>
-                    </Stack>
-                </Center>
+                <MarketHeader height="6vh" adminMode />
+                <MarketMain adminMode onClickDelete={() =>
+                    setCardDeleted(true)
+                } />
             </>
             }
             {/* Footerが2重にならないよう、Footerを呼ばないように */}

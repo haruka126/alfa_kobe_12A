@@ -1,7 +1,7 @@
 import { Button, Center, useToast, Stack, Container, Image } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 
-export const TopPageMain: React.VFC = () => {
+export const IndexMain: React.VFC = () => {
     const toast = useToast();
     const history = useHistory();
     return (
@@ -26,7 +26,7 @@ export const TopPageMain: React.VFC = () => {
                                 isClosable: true,
                                 position: "top"
                             });
-                            history.push("/store");
+                            history.push("/story");
                         }}>事前登録</Button>
                     </Center>
                 </Stack>

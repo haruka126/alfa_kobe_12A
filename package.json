@@ -1,7 +1,7 @@
 {
   "name": "alfa_kobe_12A",
   "version": "0.1.0",
-  "private": true,
+  "license": "CC BY-NC-SA 4.0",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
     "@chakra-ui/react": "^1.6.7",
