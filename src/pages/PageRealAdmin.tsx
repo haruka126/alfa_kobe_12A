@@ -1,8 +1,7 @@
-import { Center } from "@chakra-ui/react";
 import { useState } from "react";
 import { MarketHeader } from "../components/MarketHeader";
 import { MarketMain } from "../components/MarketMain";
-import { PageCleared } from "./PageCleared";
+import { GameClear } from "../components/GameClear";
 
 
 export const PageRealAdmin: React.VFC = () => {
@@ -11,9 +10,7 @@ export const PageRealAdmin: React.VFC = () => {
     return (
         <>
             { card_deleted ?
-            <Center h="100vh">
-                <PageCleared />
-            </Center>
+                <GameClear />
             :
             <>
                 <MarketHeader height="6vh" adminMode />

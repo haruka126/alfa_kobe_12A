@@ -1,29 +1,25 @@
-import { Center } from "@chakra-ui/react";
-import { useState } from "react";
+import { useToast } from "@chakra-ui/toast";
 import { useHistory } from "react-router";
 import { MarketHeader } from "../components/MarketHeader";
 import { MarketMain } from "../components/MarketMain";
-import { TextAnimation } from "../components/TextAnimation";
 
 export const PageDummyAdmin: React.VFC = () => {
-    const [card_deleted, setCardDeleted] = useState(false);
+    const toast = useToast();
     const history = useHistory();
 
     return (
         <>
-            { card_deleted ?
-            <Center h="100vh">
-                <TextAnimation text="おや、侵入者かな？<br>ユーザ名とパスワードは変更させてもらったよ。" duration={5} onComplete={() =>
-                    setTimeout(() => history.push("/market/realadmin"), 2000)
-                } />
-            </Center> :
-            <>
-                <MarketHeader height="6vh" adminMode />
-                <MarketMain adminMode onClickDelete={() =>
-                    setCardDeleted(true)
-                } />
-            </>
-            }
+            <MarketHeader height="6vh" adminMode />
+            <MarketMain adminMode onClickDelete={() => {
+                toast({
+                    title: "侵入者検知システムが作動してユーザ名とパスワードが変更させられてしまった！",
+                    status: "error",
+                    duration: 4000,
+                    isClosable: true,
+                    position: "top"
+                });
+                history.push("/market/realadmin");
+            }} />
             {/* Footerが2重にならないよう、Footerを呼ばないように */}
         </>
     );

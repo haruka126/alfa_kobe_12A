@@ -1,15 +1,7 @@
 import { Image } from "@chakra-ui/image";
-import { Flex } from "@chakra-ui/layout";
-import teamlogo from "../assets/images/logo.png";
 
-type Props = {
-    height: string;
-};
-
-export const TeamHeader: React.VFC<Props> = ({ height }) => {
+export const TeamHeader: React.VFC = () => {
     return (
-        <Flex bgColor="#131921" height={height} justify="space-between">
-            <Image px="1rem" py="4px" src={teamlogo} alt="logo" />
-        </Flex>
+        <Image width="100%" src="https://via.placeholder.com/1000x300" alt="headerimage" />
     );
 };
