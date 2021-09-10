@@ -10,16 +10,14 @@ export const PageStory: React.VFC = () => {
         <>
             <Center h="100vh">
                 <Stack>
-                    <Center h="120px" w="800px">
-                        <Box fontFamily="'Kiwi Maru', serif" fontSize="18px" color="blue.900">
-                            <TextAnimation>
-                                事前登録をしようと思ったらゲームデータが盗まれてしまったようだ。<br />
-                                調べてみると、ゲームデータは闇マーケットで販売されてしまっている。<br />
-                                どうにか、この闇マーケットからゲームデータを取り返せないだろうか？
-                            </TextAnimation>
-                        </Box>
-                    </Center>
-                    <Link color="teal.500" onClick={() => history.push("/market")} isExternal mt="1rem" textAlign="right">
+                    <Box fontFamily="'Kiwi Maru', serif" fontSize="18px" color="blue.900">
+                        <TextAnimation>
+                            事前登録をしようと思ったらゲームデータが盗まれてしまったようだ。<br />
+                            調べてみると、ゲームデータは闇マーケットで販売されてしまっている。<br />
+                            どうにか、この闇マーケットからゲームデータを取り返せないだろうか？
+                        </TextAnimation>
+                    </Box>
+                    <Link color="teal.500" onClick={() => history.push("/market")} isExternal mt="2rem" textAlign="right">
                         ゲームスタート ＞
                     </Link>
                 </Stack>

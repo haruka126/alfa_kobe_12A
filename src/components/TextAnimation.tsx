@@ -17,7 +17,7 @@ export const TextAnimation: React.VFC<Props> = ({ children, onComplete }) => {
     const setAnimation = (text: string) => {
         gsap.registerPlugin(TextPlugin)
         gsap.to(".text", {
-            duration: text.length * 0.1,
+            duration: text.length * 0.07,
             text: {
                 value: text,
             },
